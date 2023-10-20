@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1E1E1E;
+    color: #CCCCCC;
+}
+
+header {
+    background-color: #8B0000;
+    color: #FFFFFF;
+    text-align: left;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logotipo {
+    width: 200px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #6B0000;
+}
+
+main {
+    padding: 40px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: #8B0000;
+    padding: 20px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 0%;
+}
+
+.tabs a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px;
+    transition: all 0.5s;
+    position: relative;
+    margin-left: 0;
+}
+
+.tabs a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+}
+
+.tabs a:hover::before {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+}
+
+.tabs a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transform: scale(1.2, 1.2);
+}
+
+.tabs a:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+.search-bar {
+    display: none;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.search-bar.active {
+    display: flex;
+}
+
+.search-bar input {
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #8B0000;
+    color: #FFFFFF;
+}
+
+.recipe-container {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.recipe-container.active {
+    display: flex;
+}
+
+.recipe-card {
+    background-color: #8B0000;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 15px;
+    width: 500px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.recipe-card h2 {
+    margin-bottom: 15px;
+}
+
+#btn {
+    height: 60px;
+    width: 300px;
+    font-size: 18px;
+    background-color: #8B0000;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#btn:hover {
+    background-color: #6B0000;
+    transform: scale(1.1);
+}
+
+/* Estilo para o novo footer */
+.footer {
+    background-color: #8B0000;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tabs a {
+        margin: 5px 0;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .search-bar {
+        margin-top: 60px;
+    }
+    
+#logotipo {
+    width: 100px;
+    height:auto;
+}
+
+
+}
