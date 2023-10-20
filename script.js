@@ -25,7 +25,7 @@ function handleSearch() {
     if (searchTerm !== '') {
         searchRecipes(searchTerm);
     } else {
-        alert('Por favor, insira um termo de pesquisa válido.');
+        alert('Please enter a valid search term.');
     }
 }
 
