@@ -37,7 +37,7 @@ function getRandomRecipe() {
             randomTabContent.innerHTML = '';
             displayRecipe(data.meals[0], 'randomTab');
         })
-        .catch(error => console.error('Erro ao obter receita aleatória:', error));
+        .catch(error => console.error('Error getting random recipe:', error));
 }
 
 function searchRecipes(query) {
@@ -50,10 +50,10 @@ function searchRecipes(query) {
             if (recipes) {
                 recipes.slice(0, 5).forEach(recipe => displayRecipe(recipe, 'searchTab'));
             } else {
-                tabContent.innerHTML = '<p>Nenhuma receita encontrada.</p>';
+                tabContent.innerHTML = '<p>No recipes found.</p>';
             }
         })
-        .catch(error => console.error('Erro ao buscar receitas:', error));
+        .catch(error => console.error('Error when searching for recipes:', error));
 }
 
 function displayRecipe(recipe, tabId) {
